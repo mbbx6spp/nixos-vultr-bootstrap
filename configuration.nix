@@ -20,12 +20,8 @@
   environment = {
     systemPackages = with pkgs; [
       curl
-      gcc
       git
-      nix-repl
-      tmux
       vim
-      wget
     ];
 
     variables = {
@@ -70,11 +66,7 @@
       ghost = {
         extraGroups = [ "wheel" ];
         isNormalUser = true;
-        openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ sean ];
-      };
-
-      root = {
-        openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ sean ];
+        openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ spotter ];
       };
     };
   };
