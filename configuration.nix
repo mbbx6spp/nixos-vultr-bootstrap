@@ -34,7 +34,7 @@
   };
 
   networking = {
-    hostName = "merkle";
+    hostName = "buttbreather";
   };
 
   nixpkgs.config = {
