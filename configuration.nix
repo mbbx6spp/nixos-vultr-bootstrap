@@ -59,11 +59,11 @@
     };
   };
 
-  time.timeZone = "America/New_York";
+  time.timeZone = "UTC";
 
   users = {
     extraUsers = {
-      ghost = {
+      supo = {
         extraGroups = [ "wheel" ];
         isNormalUser = true;
         openssh.authorizedKeys.keys = with import ./ssh-keys.nix; [ spotter ];
